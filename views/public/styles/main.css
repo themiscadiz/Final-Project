@@ -1,0 +1,299 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+      * {
+        padding: 0 0 0 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 16px;
+      }
+      body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: rgb(206, 203, 202);
+        text-align: center;
+
+      }
+
+      h1{
+        font-size:4rem;
+        padding: 3rem;
+
+      }
+
+
+      h2{
+        font-size:2rem;
+        padding: 1rem;
+      }
+
+      p{
+        font-size:1.5rem;
+        padding-bottom: 4rem;  
+      }
+
+
+      #animals {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0rem 0rem 0rem 0rem;
+        height: 55vh;
+        width: auto;
+      }
+
+      @media screen and (max-width: 700px) {
+        #animals {
+            flex-direction: column;
+            height: auto;
+        }
+      }
+
+      #cat {
+        font-size:2rem;
+        width: 20%;
+        /* padding-top:4rem; */
+        /* padding-left: 1.5rem; */
+        /* padding-bottom: 1.5rem; */
+        position: relative;
+        height:45vh ;
+        width: auto;
+           
+    }
+
+    #cat:hover {
+        height:55vh ;     
+    }
+    @media screen and (max-width: 700px) {
+        #cat  {
+        width: 100%;
+        padding: 0px;
+        height: 5vh;
+      }
+    }
+
+      #dog {
+        font-size:2rem;
+        width: 20%;
+        /* padding-top:4rem; */
+        /* padding-left: 1.5rem; */
+        /* padding-bottom: 1.5rem; */
+        position: relative;
+        height:45vh ;
+        width: auto;
+           
+    }
+
+    #dog:hover {
+        height:55vh ;     
+    }
+    @media screen and (max-width: 700px) {
+        #dog {
+        width: 100%;
+        padding: 0px;
+        height: 5vh;
+      }
+    }
+
+      #horse {
+        font-size:2rem;
+        width: 20%;
+        /* padding-top:4rem; */
+        /* padding-left: 1.5rem; */
+        /* padding-bottom: 1.5rem; */
+        position: relative;
+        height:45vh ;
+        width: auto;
+           
+    }
+
+    #horse:hover {
+        height:55vh ;     
+    }
+
+    @media screen and (max-width: 700px) {
+        #horse  {
+        width: 100%;
+        padding: 0px;
+        height: 5vh;
+      }
+    }
+
+      #animal4 {
+        font-size:2rem;
+        width: 20%;
+        /* padding-top:4rem; */
+        /* padding-left: 1.5rem; */
+        /* padding-bottom: 1.5rem; */
+        position: relative;
+        height:45vh ;
+        width: auto;
+           
+    }
+    #animal4:hover {
+        height:55vh ;     
+    }
+    @media screen and (max-width: 700px) {
+        #animal4  {
+        width: 100%;
+        padding: 0px;
+        height: 5vh;
+      }
+    }
+      
+     
+
+    #show__total {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: 0rem 0rem 0rem 0rem;
+      height: 10vh;
+      width: 100%;
+      background-color: rgb(223, 100, 196);
+
+    }
+
+
+    #show__graph {
+      position: relative;
+      /* height:25vh ; */
+      width: 50%; 
+      background-color: rgb(91, 26, 134);
+    }
+
+    #show__info {
+      position: relative;
+      width: 50%;
+    }
+
+    #title__total {
+      position: relative;
+      /* width: 100%; */
+    }
+
+    #info {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0rem 0rem 0rem 0rem;
+        height: 10vh;
+        width: 100%;
+        background-color: rgb(81, 187, 39);
+      }
+
+      @media screen and (max-width: 700px) {
+        #info {
+            flex-direction: column;
+            height: auto;
+        }
+      }
+
+      #cat__info {
+
+        position: relative;
+        font-size:2rem;
+        width: 20%; 
+        
+        padding:4rem;
+        margin:2rem;
+        
+        
+        background-color: rgb(66, 10, 99);
+        border-radius: 25px;
+        box-shadow: 5px 5px 3px rgb(139, 139, 139);
+        justify-content: center;
+
+      }
+
+
+      p {
+        margin: 0rem;
+        padding: 0rem;
+        /* text-align: left; */
+        justify-content: center;
+
+        list-style-type: none;
+        color: aliceblue;
+        padding: 0rem;
+        justify-content: center;
+        text-align: center;
+      }
+
+      ul {
+        list-style-type: none;
+        color: aliceblue;
+        padding: 0rem;
+        justify-content: center;
+        
+        }
+        .info__style__1 {
+          list-style-type: none;
+          color: aliceblue;
+          padding: 0rem;
+          justify-content: center;
+          font-size:4rem;
+          }
+        li {
+          list-style-type: none;
+          color: aliceblue;
+          padding: 0rem;
+          justify-content: center;
+          
+          }
+
+
+        article {
+          list-style-type: none;
+          color: aliceblue;
+          padding: 0rem;
+          justify-content: center;
+          text-align: center;
+          
+          }
+
+        #dog__info {
+          position: relative;
+          font-size:2rem;
+          width: 20%; 
+          
+          padding:4rem;
+          margin:2rem;
+          
+          
+          background-color: rgb(66, 10, 99);
+          border-radius: 25px;
+          box-shadow: 5px 5px 3px rgb(139, 139, 139)
+    
+          }
+          #horse__info {
+            font-size:2rem;
+            width: 15%;
+            padding:2rem;
+      
+            position: relative;
+            /* height:60vh ; */
+            /* width: auto;  */
+    
+          }
+
+          #animal4__info {
+            font-size:2rem;
+            width: 15%;
+            padding:2rem;
+      
+            position: relative;
+            /* height:60vh ; */
+            /* width: auto;  */
+    
+          }
+
+    
+          }
+          /* li {
+              padding-bottom: 1.5rem;
+          } */
+          #line {
+              padding: 4rem;
+          }
