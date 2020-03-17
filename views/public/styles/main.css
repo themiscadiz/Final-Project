@@ -25,152 +25,161 @@
 
       h2{
         font-size:2rem;
-        padding: 1rem;
+        padding: 3rem;
       }
 
       p{
         font-size:1.5rem;
         padding-bottom: 4rem;  
       }
-
-
-      #animals {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        padding: 0rem 0rem 0rem 0rem;
-        height: 55vh;
-        width: auto;
-      }
-
-      @media screen and (max-width: 700px) {
-        #animals {
-            flex-direction: column;
-            height: auto;
+      @media screen and (max-width: 1000px) {
+        p {
+          font-size:1rem;
         }
       }
 
-      #cat {
-        font-size:2rem;
-        width: 20%;
-        /* padding-top:4rem; */
-        /* padding-left: 1.5rem; */
-        /* padding-bottom: 1.5rem; */
-        position: relative;
-        height:45vh ;
-        width: auto;
-           
-    }
 
-    #cat:hover {
-        height:55vh ;     
-    }
-    @media screen and (max-width: 700px) {
-        #cat  {
+      #animals {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+
+  
+        padding: 0rem 0rem 0rem 0rem;
+        height: 80vh;
+        width: auto;
+      }
+
+      @media screen and (max-width: 1000px) {
+        #animals {
+            flex-direction: column;
+            height: auto;
+            width: 100%;
+        }
+      }
+
+      #First__line__animal{
+        display: flex;
+        flex-direction: row;
+        position: relative;
+       
+        width: 50%;
+        background-color: rgb(187, 255, 0);
+        justify-content: center;
+      }
+
+      @media screen and (max-width: 1000px) {
+        #First__line__animal  {
         width: 100%;
         padding: 0px;
-        height: 5vh;
+        height: auto;
       }
     }
 
-      #dog {
-        font-size:2rem;
-        width: 20%;
-        /* padding-top:4rem; */
-        /* padding-left: 1.5rem; */
-        /* padding-bottom: 1.5rem; */
+      #Second__line__animal{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
         position: relative;
-        height:45vh ;
-        width: auto;
-           
-    }
+        width: 50%;
+        margin: 0rem;
+        background-color: rgb(42, 44, 165);
 
-    #dog:hover {
-        height:55vh ;     
-    }
-    @media screen and (max-width: 700px) {
-        #dog {
-        width: 100%;
+      }
+      @media screen and (max-width: 1000px) {
+        #Second__line__animal  {
+        
         padding: 0px;
-        height: 5vh;
+        height: auto;
+        /* flex-direction: column; */
+        width: 100%;
       }
     }
 
-      #horse {
+      .animals {
         font-size:2rem;
-        width: 20%;
-        /* padding-top:4rem; */
-        /* padding-left: 1.5rem; */
-        /* padding-bottom: 1.5rem; */
+        width: 80%;
+        height: auto;
         position: relative;
-        height:45vh ;
-        width: auto;
-           
+        margin: 5%;
     }
 
-    #horse:hover {
-        height:55vh ;     
+    .animals:hover {
+      width: 85%;
     }
-
     @media screen and (max-width: 700px) {
-        #horse  {
-        width: 100%;
+        .animals  {
         padding: 0px;
-        height: 5vh;
+        height: auto;
+        margin-bottom: 5rem;
+      }
+      .animals:hover {
+        height:auto; 
       }
     }
 
-      #animal4 {
-        font-size:2rem;
-        width: 20%;
-        /* padding-top:4rem; */
-        /* padding-left: 1.5rem; */
-        /* padding-bottom: 1.5rem; */
-        position: relative;
-        height:45vh ;
-        width: auto;
-           
+    .animal__name {
+      font-size: 2rem;
+      font-weight: 600;
     }
-    #animal4:hover {
-        height:55vh ;     
-    }
-    @media screen and (max-width: 700px) {
-        #animal4  {
-        width: 100%;
-        padding: 0px;
-        height: 5vh;
-      }
-    }
-      
+
      
-
     #show__total {
       display: flex;
       flex-direction: row;
       justify-content: center;
       padding: 0rem 0rem 0rem 0rem;
-      height: 10vh;
+      height: 60vh;
       width: 100%;
       background-color: rgb(223, 100, 196);
 
     }
 
+    @media screen and (max-width: 1200px) {
+      #show__total {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+      }
+    }
 
     #show__graph {
       position: relative;
       /* height:25vh ; */
-      width: 50%; 
+      width: 40%; 
       background-color: rgb(91, 26, 134);
+      height: 53vh;
+      /* margin-bottom: rem; */
+    }
+
+    @media screen and (max-width: 1200px) {
+      #show__graph{
+        flex-direction: column;
+        height: 70vh;
+        
+        width: 100%;
+      }
     }
 
     #show__info {
       position: relative;
-      width: 50%;
+      width: 60%;
+    }
+    @media screen and (max-width: 1200px) {
+      #show__info{
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+      }
     }
 
     #title__total {
       position: relative;
-      /* width: 100%; */
+      width: 100%;
+      margin: 0rem;
+      margin-top: 2rem;
     }
 
     #info {
@@ -178,122 +187,83 @@
         flex-direction: row;
         justify-content: center;
         padding: 0rem 0rem 0rem 0rem;
-        height: 10vh;
+        height: 50vh;
         width: 100%;
         background-color: rgb(81, 187, 39);
+        margin-top: 3rem;
       }
 
-      @media screen and (max-width: 700px) {
+      @media screen and (max-width: 1000px) {
         #info {
             flex-direction: column;
             height: auto;
         }
       }
 
-      #cat__info {
-
-        position: relative;
-        font-size:2rem;
-        width: 20%; 
-        
-        padding:4rem;
-        margin:2rem;
-        
-        
-        background-color: rgb(66, 10, 99);
-        border-radius: 25px;
-        box-shadow: 5px 5px 3px rgb(139, 139, 139);
+      #First__line__info{
+        display: flex;
+        flex-direction: row;
         justify-content: center;
+        position: relative;
+        width: 50%;
+        margin: 0rem;
+        background-color: brown;
 
       }
 
-
-      p {
-        margin: 0rem;
-        padding: 0rem;
-        /* text-align: left; */
+      @media screen and (max-width: 1000px) {
+        #First__line__info {
+            height: auto;
+            width: 100%;
+        }
+      }
+      #Second__line__info{
+        display: flex;
+        flex-direction: row;
         justify-content: center;
+        position: relative;
+        width: 50%;
+        margin: 0rem;
 
+      }
+      @media screen and (max-width: 1000px) {
+        #Second__line__info {
+            height: auto;
+            width: 100%;
+
+        }
+      }
+
+    ul {
         list-style-type: none;
-        color: aliceblue;
-        padding: 0rem;
+        width: 50%;
+        margin-top: 2rem;
+        margin-bottom: 12rem;
+        margin-left: 5%;
+        margin-right: 3%;
         justify-content: center;
         text-align: center;
-      }
-
-      ul {
-        list-style-type: none;
-        color: aliceblue;
-        padding: 0rem;
-        justify-content: center;
-        
+        background-color: blue;
+        border-radius: 25px;
+        box-shadow: 5px 5px 3px rgb(139, 139, 139);
+        height: 250px;
         }
-        .info__style__1 {
-          list-style-type: none;
-          color: aliceblue;
-          padding: 0rem;
-          justify-content: center;
-          font-size:4rem;
-          }
+
         li {
+          font-size: 1.5rem;
           list-style-type: none;
           color: aliceblue;
-          padding: 0rem;
-          justify-content: center;
+          padding-top: 0rem;
           
           }
 
-
-        article {
-          list-style-type: none;
-          color: aliceblue;
-          padding: 0rem;
-          justify-content: center;
-          text-align: center;
-          
-          }
-
-        #dog__info {
-          position: relative;
-          font-size:2rem;
-          width: 20%; 
-          
-          padding:4rem;
-          margin:2rem;
-          
-          
-          background-color: rgb(66, 10, 99);
-          border-radius: 25px;
-          box-shadow: 5px 5px 3px rgb(139, 139, 139)
-    
-          }
-          #horse__info {
+          .info__style__1 {
+            margin-top: 5rem;
+            margin-bottom: 4rem;
             font-size:2rem;
-            width: 15%;
-            padding:2rem;
-      
-            position: relative;
-            /* height:60vh ; */
-            /* width: auto;  */
-    
           }
-
-          #animal4__info {
-            font-size:2rem;
-            width: 15%;
-            padding:2rem;
-      
-            position: relative;
-            /* height:60vh ; */
-            /* width: auto;  */
-    
-          }
-
-    
-          }
-          /* li {
-              padding-bottom: 1.5rem;
-          } */
+  
           #line {
-              padding: 4rem;
+              /* padding-top: 20rem; */
+              margin-top: 10rem;
           }

@@ -10,25 +10,29 @@
   <h1>What's Your Favorite Animal?</h1>
   <p>Click on your favorite animal and we'll tell you popular is it!</p>
   <section id = "animals">
-      <div >
-          <input type="image" id="cat" alt="Cat" value="animal_1"
+    <div id = "First__line__animal">
+      <div>
+          <input type="image" class = "animals" alt="Cat" value="animal_1"
      src="https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80">
-      </div>
+     <p class = "animal__name">Cat</p> </div>
 
-      <div >
-          <input type="image" id="dog" alt="dog" value="animal_2"
-     src="https://images.unsplash.com/photo-1529472119196-cb724127a98e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=642&q=80">
-      </div>
+      <div>
+          <input type="image" class = "animals" alt="dog" value="animal_2"
+     src="https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"">
+     <p class = "animal__name">Cat</p></div>
+    </div>
 
-      <div >
-          <input type="image" id="horse" alt="horse" value="animal_3"
-     src="https://images.unsplash.com/photo-1496248594191-5ac06efa597a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80">
-      </div>
-      <div >
-          <input type="image" id="animal4" alt="animal4" value="animal_4"
-     src="https://images.unsplash.com/photo-1557680636-ef991b35da56?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=581&q=80">
-      </div>
+    <div id = "Second__line__animal">
 
+      <div>
+          <input type="image" class = "animals" alt="horse" value="animal_3"
+          src="https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"">
+          <p class = "animal__name">Cat</p> </div>
+      <div >
+          <input type="image" class = "animals" alt="animal4" value="animal_4"
+          src="https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"">
+          <p class = "animal__name">Cat</p></div>
+    </div>
 
   </section>
 
@@ -54,31 +58,30 @@
 
     <section id = "info">
 
-        <div id = cat__info>
-            <!-- <article> -->
-                <p>Cats</p>
-                <p id = catNum value="1"></p>
-                <p>CatsNum</p>
-            <!-- </article> -->
-        </div>
-
-        <div id = dog__info>
+        <div id = First__line__info>
             <ul>
-                <li class = info__style__1>Dogs</li>
+                <li class = info__style__1>Cats#</li>
+                <li id = catNum value="1"></li>
+                <li>Cats</li>
+        </ul>
+
+            <ul >
+                <li class = info__style__1>Dogs#</li>
+                <li>Dogs</li>
                 <li id = dogNum value="1"></li>
-                <li>puf</li>
+                
             </ul>
         </div>
 
-        <div id = horse__info>
+        <div id = Second__line__info>
             <ul>
+                <li class = info__style__1>Horses#</li>
                 <li>Horses</li>
                 <li id = horseNum value="1"></li>
             </ul>
-        </div>
 
-        <div id = animal4__info>
             <ul>
+                <li class = info__style__1>Turtle#</li>
                 <li>Turtle</li>
                 <li id = animal4Num value="1"></li>
             </ul>
@@ -90,6 +93,7 @@
 
 </section>
 </section>
+<section>
 
   <div id = line >
       <hr />
@@ -97,5 +101,6 @@
   <footer>
       <p>Images from <a href="https://unsplash.com/">Unsplash</a></p>
   </footer>
+</section>
 </body>
 </html>
