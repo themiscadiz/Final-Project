@@ -115,6 +115,33 @@
       }
     }
 
+
+    #cat{
+      font-size:2rem;
+      width: 80%;
+      height: auto;
+      position: relative;
+      margin: 5%;
+  }
+
+  #cat:hover {
+    width: 85%;
+  }
+  @media screen and (max-width: 700px) {
+      #cat  {
+      padding: 0px;
+      height: auto;
+      margin-bottom: 5rem;
+    }
+    #cat:hover {
+      height:auto; 
+    }
+  }
+
+
+
+
+/*  */
     .animal__name {
       font-size: 2rem;
       font-weight: 600;
@@ -156,6 +183,29 @@
         width: 100%;
       }
     }
+
+
+    /* #graph {
+      display: flex;
+      flex-direction: row;
+      justify-content: right;
+      padding: 0rem 0rem 0rem 0rem;
+      height: 100%;
+      width: 100%;
+      background-color: rgb(100, 129, 223);
+
+    }
+
+    @media screen and (max-width: 1200px) {
+      #graph {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+      }
+    } */
+
+
+
 
     #show__info {
       position: relative;

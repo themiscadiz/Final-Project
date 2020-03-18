@@ -2,8 +2,516 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <link rel="stylesheet" href="/public/styles/main.css" >
+    <link rel="stylesheet" type="text/css" href="/public/styles/main.css" >
     <script src="/public/js/main.js"></script>
+
+
+    <script>
+    
+    window.addEventListener('DOMContentLoaded', async () => {
+
+            
+// let showVotes = true;
+// let voteCat = true; 
+let catCount = 0;
+// let voteDog = true; 
+let dogCount = 0;
+
+// GET function using loadGet() | From Postman
+
+async function loadGet(){
+  console.log("running loadGet")
+
+
+  // ????
+  var myHeaders = new Headers();
+  myHeaders.append("Content-Type", "application/x-www-form-urlencoded");
+
+  var urlencoded = new URLSearchParams();
+  urlencoded.append("animal", "dog");
+  urlencoded.append("votes", "0");
+
+  var requestOptions = {
+    method: 'GET',
+    headers: myHeaders,
+    // body: urlencoded,
+    redirect: 'follow'
+  };
+
+
+  const data = await fetch("http://localhost:3030/api/",requestOptions);
+  const result = await data.json();
+  console.log(result[0].votes);
+
+  catCount = result[3].votes;
+  dogCount = result[2].votes;
+  showAllVotes();
+}
+
+
+///
+const specialUrlCat = "http://localhost:3030/api/tP9eCA3nl6VeJBu9"
+
+const specialUrlDog = "http://localhost:3030/api/b4mkpyQp3c2zhcXd"
+
+// define a custom function to wrap your await
+async function mySpecialRequestCat(url){
+    try{
+      catCount++;
+
+      const options = {
+        method: 'PUT',
+        headers: {
+          "Content-Type":"application/json"
+        },
+        body:JSON.stringify({
+          "votes" : catCount
+        })
+      }
+
+        const data = await fetch(url,options);
+        const result = await data.json();
+
+        getVotesCat(result);
+
+    } catch(err){
+        return err;
+    }  
+}
+
+// define a custom function to wrap your await
+async function mySpecialRequestDog(url){
+    try{
+      dogCount++;
+      
+
+      const options = {
+        method: 'PUT',
+        headers: {
+          "Content-Type":"application/json"
+        },
+        body:JSON.stringify({
+          "votes" : dogCount
+        })
+      }
+
+        const data = await fetch(url,options);
+        const result = await data.json();
+
+        getVotesDog(result);
+
+    } catch(err){
+        return err;
+    }  
+}
+
+
+
+// see update numbers in the client side | console.log on the Inspect on website
+
+async function getVotesCat(result){
+    // console.log(result.message);
+    catCount = result.message;
+
+    // showVotes = true; 
+    showAllVotes(); 
+
+}
+
+// see update numbers in the client side | console.log on the Inspect on website
+
+async function getVotesDog(result){
+    // console.log(result.message);
+    dogCount = result.message;
+
+    // showVotes = true; 
+    showAllVotes(); 
+
+}
+
+//Buttons
+document.getElementById("cat").addEventListener("click", function addVoteCat(){
+    
+    // if(voteCat){
+      mySpecialRequestCat(specialUrlCat)
+    // }
+});
+
+document.getElementById("dog").addEventListener("click", function addVoteDog(){
+    
+    // if(voteDog){  
+        mySpecialRequestDog(specialUrlDog)
+    // }
+});
+
+//Show Numbers on screen
+async function showAllVotes(){
+  // if(showVotes){
+      document.getElementById("catNum").innerHTML = catCount;
+      document.getElementById("dogNum").innerHTML = dogCount;
+  // }
+}
+
+loadGet();
+
+})
+    
+    
+    
+    
+    
+    
+    
+    
+    </script>
+
+
+
+
+
+<style>
+
+
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
+
+      * {
+        padding: 0 0 0 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      html {
+        font-size: 16px;
+      }
+      body {
+        font-family: 'Open Sans', sans-serif;
+        background-color: rgb(206, 203, 202);
+        text-align: center;
+
+      }
+
+      h1{
+        font-size:4rem;
+        padding: 3rem;
+
+      }
+
+
+      h2{
+        font-size:2rem;
+        padding: 3rem;
+      }
+
+      p{
+        font-size:1.5rem;
+        padding-bottom: 4rem;  
+      }
+      @media screen and (max-width: 1000px) {
+        p {
+          font-size:1rem;
+        }
+      }
+
+
+      #animals {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0rem 0rem 0rem 0rem;
+        height: 80vh;
+        width: auto;
+      }
+
+      @media screen and (max-width: 1000px) {
+        #animals {
+            flex-direction: column;
+            height: auto;
+            width: 100%;
+        }
+      }
+
+      #First__line__animal{
+        display: flex;
+        flex-direction: row;
+        position: relative; 
+        width: 50%;
+        background-color: rgb(187, 255, 0);
+        justify-content: center;
+      }
+
+      @media screen and (max-width: 1000px) {
+        #First__line__animal  {
+        width: 100%;
+        padding: 0px;
+        height: auto;
+      }
+    }
+
+      #Second__line__animal{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        width: 50%;
+        margin: 0rem;
+        background-color: rgb(42, 44, 165);
+
+      }
+      @media screen and (max-width: 1000px) {
+        #Second__line__animal  {
+        padding: 0px;
+        height: auto;
+        /* flex-direction: column; */
+        width: 100%;
+      }
+    }
+
+      .animals {
+        font-size:2rem;
+        width: 80%;
+        height: auto;
+        position: relative;
+        margin: 5%;
+    }
+
+    .animals:hover {
+      width: 85%;
+    }
+    @media screen and (max-width: 700px) {
+        .animals  {
+        padding: 0px;
+        height: auto;
+        margin-bottom: 5rem;
+      }
+      .animals:hover {
+        height:auto; 
+      }
+    }
+
+
+    #cat{
+      font-size:2rem;
+      width: 80%;
+      height: auto;
+      position: relative;
+      margin: 5%;
+  }
+
+  #cat:hover {
+    width: 85%;
+  }
+  @media screen and (max-width: 700px) {
+      #cat  {
+      padding: 0px;
+      height: auto;
+      margin-bottom: 5rem;
+    }
+    #cat:hover {
+      height:auto; 
+    }
+  }
+
+
+  #dog{
+      font-size:2rem;
+      width: 80%;
+      height: auto;
+      position: relative;
+      margin: 5%;
+  }
+
+  #dog:hover {
+    width: 85%;
+  }
+  @media screen and (max-width: 700px) {
+      #dog  {
+      padding: 0px;
+      height: auto;
+      margin-bottom: 5rem;
+    }
+    #dog:hover {
+      height:auto; 
+    }
+  }
+
+
+
+
+/*  */
+    .animal__name {
+      font-size: 2rem;
+      font-weight: 600;
+    }
+
+     
+    #show__total {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      padding: 0rem 0rem 0rem 0rem;
+      height: 60vh;
+      width: 100%;
+      background-color: rgb(223, 100, 196);
+
+    }
+
+    @media screen and (max-width: 1200px) {
+      #show__total {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+      }
+    }
+
+    #show__graph {
+      position: relative;
+      /* height:25vh ; */
+      width: 40%; 
+      background-color: rgb(91, 26, 134);
+      height: 53vh;
+      /* margin-bottom: rem; */
+    }
+
+    @media screen and (max-width: 1200px) {
+      #show__graph{
+        flex-direction: column;
+        height: 70vh;
+        width: 100%;
+      }
+    }
+
+
+    /* #graph {
+      display: flex;
+      flex-direction: row;
+      justify-content: right;
+      padding: 0rem 0rem 0rem 0rem;
+      height: 100%;
+      width: 100%;
+      background-color: rgb(100, 129, 223);
+
+    }
+
+    @media screen and (max-width: 1200px) {
+      #graph {
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+      }
+    } */
+
+
+
+
+    #show__info {
+      position: relative;
+      width: 60%;
+    }
+    @media screen and (max-width: 1200px) {
+      #show__info{
+        flex-direction: column;
+        height: auto;
+        width: 100%;
+      }
+    }
+
+    #title__total {
+      position: relative;
+      width: 100%;
+      margin: 0rem;
+      margin-top: 2rem;
+      font-size: 1.5rem;
+    }
+
+    #info {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 0rem 0rem 0rem 0rem;
+        height: 50vh;
+        width: 100%;
+        background-color: rgb(81, 187, 39);
+        margin-top: 3rem;
+      }
+
+      @media screen and (max-width: 1000px) {
+        #info {
+            flex-direction: column;
+            height: auto;
+        }
+      }
+
+      #First__line__info{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        width: 50%;
+        margin: 0rem;
+        background-color: brown;
+
+      }
+
+      @media screen and (max-width: 1000px) {
+        #First__line__info {
+            height: auto;
+            width: 100%;
+        }
+      }
+      #Second__line__info{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        position: relative;
+        width: 50%;
+        margin: 0rem;
+
+      }
+      @media screen and (max-width: 1000px) {
+        #Second__line__info {
+            height: auto;
+            width: 100%;
+        }
+      }
+
+    ul {
+        list-style-type: none;
+        width: 50%;
+        margin-top: 2rem;
+        margin-bottom: 12rem;
+        margin-left: 5%;
+        margin-right: 3%;
+        justify-content: center;
+        text-align: center;
+        background-color: blue;
+        border-radius: 25px;
+        box-shadow: 5px 5px 3px rgb(139, 139, 139);
+        height: 250px;
+        }
+
+        li {
+          font-size: 1.5rem;
+          list-style-type: none;
+          color: aliceblue;
+          padding-top: 0rem;
+          
+          }
+
+          .info__style__1 {
+            margin-top: 5rem;
+            margin-bottom: 4rem;
+            font-size:2rem;
+          }
+  
+          #line {
+              /* padding-top: 20rem; */
+              margin-top: 10rem;
+          }
+
+
+</style>
+
     <title>What's Your Favorite Animal?</title>
 </head>
 <body>
@@ -12,12 +520,12 @@
   <section id = "animals">
     <div id = "First__line__animal">
       <div>
-          <input type="image" class = "animals" alt="Cat" value="animal_1"
+        <input type="image" id="cat" alt="Cat" value="animal_1"
      src="https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80">
      <p class = "animal__name">Cat</p> </div>
 
       <div>
-          <input type="image" class = "animals" alt="dog" value="animal_2"
+          <input type="image" id = "dog" alt="dog" value="animal_2"
      src="https://images.unsplash.com/photo-1548802673-380ab8ebc7b7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=750&q=80"">
      <p class = "animal__name">Cat</p></div>
     </div>
@@ -43,13 +551,15 @@
 
     <section>
     <h2>How many votes has your favortite?</h2>
+    
 
     <section id = "show__total">
+       
+        
 
     <section id = "show__graph">
-        <div id = "graph">
-
-        </div>
+        <iframe style="width: 100%; height: 100%; overflow: hidden;"  scrolling="no" frameborder="0" src="https://editor.p5js.org/embed/B1j5yC2vQ"></iframe>
+         <div id = "graph"></div>
     </section>
 
 
