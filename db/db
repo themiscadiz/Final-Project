@@ -1,8 +1,4 @@
 {"created":1584552046529,"animal":"fish","votes":"0","_id":"PMgfiYc84P0FZwDb"}
 {"created":1584552026415,"animal":"bird","votes":"0","_id":"aWq4oGUP71nivULK"}
-{"created":1584551911940,"animal":"dog","votes":6,"_id":"b4mkpyQp3c2zhcXd"}
-{"created":1584551815781,"animal":"cat","votes":6,"_id":"tP9eCA3nl6VeJBu9"}
-{"created":1584551815781,"animal":"cat","votes":7,"_id":"tP9eCA3nl6VeJBu9"}
-{"created":1584551815781,"animal":"cat","votes":8,"_id":"tP9eCA3nl6VeJBu9"}
-{"created":1584551815781,"animal":"cat","votes":9,"_id":"tP9eCA3nl6VeJBu9"}
-{"created":1584551815781,"animal":"cat","votes":10,"_id":"tP9eCA3nl6VeJBu9"}
+{"created":1584551911940,"animal":"dog","votes":42,"_id":"b4mkpyQp3c2zhcXd"}
+{"created":1584551815781,"animal":"cat","votes":25,"_id":"tP9eCA3nl6VeJBu9"}

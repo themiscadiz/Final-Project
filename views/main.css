@@ -139,6 +139,29 @@
   }
 
 
+  #dog{
+      font-size:2rem;
+      width: 80%;
+      height: auto;
+      position: relative;
+      margin: 5%;
+  }
+
+  #dog:hover {
+    width: 85%;
+  }
+  @media screen and (max-width: 700px) {
+      #dog  {
+      padding: 0px;
+      height: auto;
+      margin-bottom: 5rem;
+    }
+    #dog:hover {
+      height:auto; 
+    }
+  }
+
+
 
 
 /*  */

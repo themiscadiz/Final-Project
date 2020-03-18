@@ -10,10 +10,19 @@ const pathToData = path.resolve(__dirname, "db/db")
 const db = new Datastore({ filename: pathToData});
 db.loadDatabase();
 
+
+// Send files from the public directory
+app.use(express.static( path.resolve(__dirname, 'views') ));
+
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded({extended:true})); // to support URL-encoded bodies
 
-// Animales.com
+
+// app.get("/", (request, response) => {
+//     response.sendFile("index.html");
+// });
+
+
 app.get('/', function(req, res) {
     res.sendFile(indexLocation)
 });
@@ -22,77 +31,7 @@ let cat = 0;
 let dog = 0;
 
 
-// database 
-async function getVotes(){
-    // const contents = fs.readFileSync(path.join(__dirname, "./db/votes.json"));
-    // const obj = JSON.parse(contents);
-    // return obj.votes;
-
-    db.find({},  function (err, docs) {
-        if(err){
-            return err;
-        } 
-
-        console.log(docs);
-
-        // let x = docs[0].votes;
-
-        // like before we send the json response
-        return  docs.votes;
-    });
-
-
-    db.find({},  function (err, docs) {
-        if(err){
-            return err;
-        } 
-
-        // console.log(docs[0].votes);
-
-        // let x = docs[0].votes;
-
-        // like before we send the json response
-        console.log(docs);
-        return  docs;
-    });
-
-
-
-}
-    
-
-    // const contents = {"votes":cat}
-
-    // fs.writeFile(path.join(__dirname, "./db/votes.json"), JSON.stringify(contents), (err) => {
-    //     if(err){
-    //       return console.error(err)
-    //     } 
-    //     //resolve(content);
-    // });
-
-    // // const obj = JSON.parse(contents);
-    // // return obj.votes;
-
-    // console.log(cat);
-
-// }
-
-
-// var routerCat = express.Router();
-// app.get('/api/cat', (req, res) => {
-
-//     //console.log(getVotes());  
-//     updateVotes();  
-
-//     //cat = getVotes();
-//     // Send cat value to the frontend
-//     res.json(
-//         {message: cat}
-//     )
-// })
-
-
-// GET - /api
+// GET - /api get everything
 app.get("/api", (request, response) => {    
     // db references our nedb instance
     // we use "find" and an empty search {} to give us back all the data in the db
@@ -105,39 +44,21 @@ app.get("/api", (request, response) => {
     });
 });
 
+//To add a new element to db
+app.post("/api", (request, response) => {
+    // our unix timestamp
+    const unixTimeCreated = new Date().getTime();
+    // add our unix time as a "created" property and add it to our request.body
+    const newData = Object.assign({"created": unixTimeCreated}, request.body)
 
-
-
-
-
-// // GET - /api
-// app.get("/api", (request, response) => {    
-//     // db references our nedb instance
-//     // we use "find" and an empty search {} to give us back all the data in the db
-//     db.find({}, function (err, docs) {
-//         if(err){
-//             return err;
-//         } 
-//         // like before we send the json response
-//         response.json(docs);
-//     });
-// });
-
-
-// app.post("/api", (request, response) => {
-//     // our unix timestamp
-//     const unixTimeCreated = new Date().getTime();
-//     // add our unix time as a "created" property and add it to our request.body
-//     const newData = Object.assign({"created": unixTimeCreated}, request.body)
-
-//     // add in our data object to our database using .insert()
-//     db.insert(newData, (err, docs) =>{
-//         if(err){
-//             return err;
-//         }
-//         response.json(docs);
-//     });
-// })
+    // add in our data object to our database using .insert()
+    db.insert(newData, (err, docs) =>{
+        if(err){
+            return err;
+        }
+        response.json(docs);
+    });
+})
 
 
 
@@ -148,11 +69,13 @@ app.put("/api/:id", (request, response)=> {
     const selectedItemId = request.params.id;
 
     const updatedDataProperties = request.body
-
+    
+    
+    //If the selected id is a CAT, then update in the database
     if(selectedItemId == "tP9eCA3nl6VeJBu9"){
 
-        console.log(selectedItemId);
-        console.log("it's a cat");
+        // console.log(selectedItemId);
+        // console.log("it's a cat");
 
         cat=request.body.votes;
 
@@ -167,9 +90,12 @@ app.put("/api/:id", (request, response)=> {
         )
 
     }
+    //If the selected id is a DOG, then update in the database
     else if(selectedItemId == "b4mkpyQp3c2zhcXd"){
-        console.log(selectedItemId);
-        console.log("it's a dog");
+
+        // console.log(selectedItemId);
+        // console.log("it's a dog");
+
         dog=request.body.votes;
 
         // Set an existing field's value
