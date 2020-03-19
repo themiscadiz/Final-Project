@@ -294,34 +294,11 @@ let heightSize;
 
 let minSize;
 let maxSize;
-            
-// let minSize1;
-// let maxSize1;
-
-// let minSize2;
-// let maxSize2;
 
 let currentSize;
 
-// let currentSize1;
-// let currentSize2;
-
-// let currentSizeHover = 0;
-
-// let animal1;
-
-
-
-
-// let mousePos1;
-// let mousePos2;
-// let mousePos3;
-// let mousePos4;
 
 let position;
-// let position2;
-// let position1;
-// let position4;
 
 let whatAnimal="";
 

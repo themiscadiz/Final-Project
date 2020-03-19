@@ -76,8 +76,6 @@ app.put("/api/:id", (request, response)=> {
     //If the selected id is a CAT, then update in the database
     if(selectedItemId == "tP9eCA3nl6VeJBu9"){
 
-        // console.log(selectedItemId);
-        // console.log("it's a cat");
 
         cat=request.body.votes;
 
