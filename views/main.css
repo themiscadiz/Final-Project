@@ -11,26 +11,37 @@
       }
       body {
         font-family: 'Open Sans', sans-serif;
-        background-color: rgb(206, 203, 202);
+        background-color: rgb(235, 235, 235);
         text-align: center;
 
       }
 
       h1{
-        font-size:4rem;
+        font-size:3rem;
         padding: 3rem;
+        /* padding-bottom: 1rem; */
+        font-weight: 300;
 
       }
 
 
       h2{
         font-size:2rem;
-        padding: 3rem;
+        font-weight: 300; 
+        padding: 1rem;
+        
+      }
+
+      #h2__ShowVotes{
+        padding: 5rem;
+
       }
 
       p{
-        font-size:1.5rem;
-        padding-bottom: 4rem;  
+        font-size:1.2rem;
+        padding-bottom: 4rem;
+        margin-bottom: 4rem;
+        font-weight: 400;  
       }
       @media screen and (max-width: 1000px) {
         p {
@@ -38,6 +49,47 @@
         }
       }
 
+      li {
+        font-size: 1rem;
+        font-weight: 400;
+        list-style-type: none;
+        color: aliceblue;
+        padding-top: 0rem;
+        
+        }
+        #catNum{
+          font-size:3.5rem;
+          padding-top: 2rem;
+          padding-bottom: 2.5rem;
+          /* padding-bottom: 1rem; */
+          font-weight: 600;         
+        }
+      #dogNum{
+        font-size:3.5rem;
+        padding-top: 2rem;
+        padding-bottom: 2.5rem;
+        /* padding-bottom: 1rem; */
+        font-weight: 600;         
+      }
+      #birdNum{
+        font-size:3.5rem;
+        padding-top: 2rem;
+        padding-bottom: 2.5rem;
+        /* padding-bottom: 1rem; */
+        font-weight: 600;         
+      }
+    #fishNum{
+      font-size:3.5rem;
+      padding-top: 2rem;
+      padding-bottom: 2.5rem;
+      /* padding-bottom: 1rem; */
+      font-weight: 600;         
+    }
+
+
+      hr{
+        margin-top: 4rem;
+      }
 
       #animals {
 
@@ -62,7 +114,7 @@
         flex-direction: row;
         position: relative; 
         width: 50%;
-        background-color: rgb(187, 255, 0);
+        /* background-color: rgb(187, 255, 0); */
         justify-content: center;
       }
 
@@ -81,7 +133,7 @@
         position: relative;
         width: 50%;
         margin: 0rem;
-        background-color: rgb(42, 44, 165);
+        /* background-color: rgb(42, 44, 165); */
 
       }
       @media screen and (max-width: 1000px) {
@@ -122,10 +174,13 @@
       height: auto;
       position: relative;
       margin: 5%;
+      border-radius: 100px;
+      box-shadow: 5px 5px 3px rgb(201, 201, 201);
   }
 
   #cat:hover {
     width: 85%;
+    box-shadow: 5px 5px 10px rgb(94, 94, 94);
   }
   @media screen and (max-width: 700px) {
       #cat  {
@@ -135,6 +190,8 @@
     }
     #cat:hover {
       height:auto; 
+      box-shadow: 5px 5px 10px rgb(94, 94, 94);
+      
     }
   }
 
@@ -145,10 +202,13 @@
       height: auto;
       position: relative;
       margin: 5%;
+      border-radius: 100px;
+      box-shadow: 5px 5px 3px rgb(201, 201, 201);
   }
 
   #dog:hover {
     width: 85%;
+    box-shadow: 5px 5px 10px rgb(94, 94, 94);
   }
   @media screen and (max-width: 700px) {
       #dog  {
@@ -158,16 +218,73 @@
     }
     #dog:hover {
       height:auto; 
+      box-shadow: 5px 5px 10px rgb(94, 94, 94);
     }
   }
+
+
+  #bird{
+    font-size:2rem;
+    width: 80%;
+    height: auto;
+    position: relative;
+    margin: 5%;
+    border-radius: 100px;
+    box-shadow: 5px 5px 3px rgb(201, 201, 201);
+}
+
+#bird:hover {
+  width: 85%;
+  box-shadow: 5px 5px 10px rgb(94, 94, 94);
+}
+@media screen and (max-width: 700px) {
+    #bird  {
+    padding: 0px;
+    height: auto;
+    margin-bottom: 5rem;
+  }
+  #bird:hover {
+    height:auto; 
+    box-shadow: 5px 5px 10px rgb(94, 94, 94);
+  }
+}
+
+
+#fish{
+    font-size:2rem;
+    width: 80%;
+    height: auto;
+    position: relative;
+    margin: 5%;
+    border-radius: 100px;
+    box-shadow: 5px 5px 3px rgb(201, 201, 201);
+}
+
+#fish:hover {
+  width: 85%;
+  box-shadow: 5px 5px 10px rgb(94, 94, 94);
+}
+@media screen and (max-width: 700px) {
+    #fish  {
+    padding: 0px;
+    height: auto;
+    margin-bottom: 5rem;
+  }
+  #fish:hover {
+    height:auto;
+    box-shadow: 5px 5px 10px rgb(94, 94, 94); 
+  }
+}
 
 
 
 
 /*  */
     .animal__name {
-      font-size: 2rem;
+      font-size: 1rem;
       font-weight: 600;
+      padding: 3rem;
+      padding-top: 0rem;
     }
 
      
@@ -178,7 +295,7 @@
       padding: 0rem 0rem 0rem 0rem;
       height: 60vh;
       width: 100%;
-      background-color: rgb(223, 100, 196);
+      /* background-color: rgb(223, 100, 196); */
 
     }
 
@@ -194,7 +311,7 @@
       position: relative;
       /* height:25vh ; */
       width: 40%; 
-      background-color: rgb(91, 26, 134);
+      /* background-color: rgb(91, 26, 134); */
       height: 53vh;
       /* margin-bottom: rem; */
     }
@@ -247,7 +364,8 @@
       width: 100%;
       margin: 0rem;
       margin-top: 2rem;
-      font-size: 1.5rem;
+      font-weight: 300;
+      font-size: 1rem;
     }
 
     #info {
@@ -257,7 +375,7 @@
         padding: 0rem 0rem 0rem 0rem;
         height: 50vh;
         width: 100%;
-        background-color: rgb(81, 187, 39);
+        /* background-color: rgb(81, 187, 39); */
         margin-top: 3rem;
       }
 
@@ -275,7 +393,7 @@
         position: relative;
         width: 50%;
         margin: 0rem;
-        background-color: brown;
+        /* background-color: brown; */
 
       }
 
@@ -303,26 +421,20 @@
 
     ul {
         list-style-type: none;
-        width: 50%;
-        margin-top: 2rem;
+        width: 35%;
+        margin-top: 0rem;
         margin-bottom: 12rem;
         margin-left: 5%;
-        margin-right: 3%;
+        margin-right: 5%;
         justify-content: center;
         text-align: center;
-        background-color: blue;
+        background-color: rgb(85, 14, 156);
         border-radius: 25px;
-        box-shadow: 5px 5px 3px rgb(139, 139, 139);
-        height: 250px;
+        box-shadow: 5px 5px 3px rgb(190, 190, 190);
+        height: 30vh;
         }
 
-        li {
-          font-size: 1.5rem;
-          list-style-type: none;
-          color: aliceblue;
-          padding-top: 0rem;
-          
-          }
+    
 
           .info__style__1 {
             margin-top: 5rem;
@@ -334,3 +446,9 @@
               /* padding-top: 20rem; */
               margin-top: 10rem;
           }
+          .references{
+            margin-top: 5rem;
+            font-size: 1rem;
+          }
+
+        

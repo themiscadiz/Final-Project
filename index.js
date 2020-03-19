@@ -29,6 +29,8 @@ app.get('/', function(req, res) {
 
 let cat = 0;
 let dog = 0;
+let bird = 0;
+let fish = 0;
 
 
 // GET - /api get everything
@@ -109,6 +111,49 @@ app.put("/api/:id", (request, response)=> {
         {message: dog}
         )
     }
+
+//If the selected id is a BIRD, then update in the database
+else if(selectedItemId == "aWq4oGUP71nivULK"){
+
+    // console.log(selectedItemId);
+
+    bird=request.body.votes;
+
+    // Set an existing field's value
+    db.update({ _id: selectedItemId  }, { $set: updatedDataProperties }, (err, numReplaced) => {
+        if(err){
+            response.status(404).send("not working");
+        }
+       
+    });
+    response.json(
+    {message: bird}
+    )
+}
+
+
+//If the selected id is a FISH, then update in the database
+else if(selectedItemId == "PMgfiYc84P0FZwDb"){
+
+    // console.log(selectedItemId);
+
+    fish=request.body.votes;
+
+    // Set an existing field's value
+    db.update({ _id: selectedItemId  }, { $set: updatedDataProperties }, (err, numReplaced) => {
+        if(err){
+            response.status(404).send("not working");
+        }
+       
+    });
+    response.json(
+    {message: fish}
+    )
+}
+
+
+
+
 }
 );
 
