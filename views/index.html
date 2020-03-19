@@ -10,6 +10,9 @@
     <script src="p5.js"></script>
     <script src="p5.dom.js"></script>
 
+    
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+
     <title>What's Your Favorite Animal?</title>
 </head>
 <body>
@@ -42,10 +45,17 @@
     </div>
 
   </section>
+      
+  <div id = "show__voted">
+    <p id = voted__p></p>
+    <p id = voted value="1"></p>
+  </div>
 
   
 
-  <hr />
+  <div id = "linea1"  >
+    <!-- <hr/> -->
+</div> 
 
 
     <section>
@@ -56,13 +66,9 @@
         
 
     <section id = "show__graph">
+        <div id = "graph">
 
-        <!-- testing p5js stuff -->
-       
-
-
-        <!-- <iframe style="width: 100%; height: 100%; overflow: hidden;"  scrolling="no" frameborder="0" src="https://editor.p5js.org/embed/B1j5yC2vQ"></iframe> -->
-         <div id = "graph"></div>
+        </div>
     </section>
 
 
@@ -73,13 +79,11 @@
 
         <div id = First__line__info>
             <ul>
-                <!-- <li class = info__style__1>Cats#</li> -->
                 <li id = catNum value="1"></li>
                 <li>Cats</li>
         </ul>
 
             <ul >
-                <!-- <li class = info__style__1>Dogs#</li> -->
                 <li id = dogNum value="1"></li>
                 <li>Dogs</li>
                 
@@ -88,15 +92,12 @@
         </div>
 
         <div id = Second__line__info>
-            <ul>
-                <!-- <li class = info__style__1>Horses#</li> -->
-                
+            <ul>                
                 <li id = birdNum value="1"></li>
                 <li>Birds</li>
             </ul>
 
             <ul>
-                <!-- <li class = info__style__1>Turtle#</li> -->
                 <li id = fishNum value="1"></li>
                 <li>Fishes</li>
                 
@@ -111,8 +112,8 @@
 </section>
 <section>
 
-  <div id = line >
-      <hr />
+  <div id = "linea2" >
+      <!-- <hr /> -->
   </div> 
   <footer>
       <p class = "references">Images from <a href="https://unsplash.com/">Unsplash</a></p>

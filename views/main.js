@@ -1,16 +1,28 @@
 
-    
+let catCount = 0;
+let dogCount = 0;
+let birdCount = 0;
+let fishCount = 0;
+
+
+let gotData = false;
+
+let showMessageCat = false;
+let showMessageDog = false;
+let showMessageBird = false;
+let showMessageFish = false;
+
 window.addEventListener('DOMContentLoaded', async () => {
 
         
 // let showVotes = true;
 // let voteCat = true; 
-let catCount = 0;
+// let catCount = 0;
 // let voteDog = true; 
 
-let dogCount = 0;
-let birdCount = 0;
-let fishCount = 0;
+
+
+
 
 // GET function using loadGet() | From Postman
 
@@ -42,6 +54,9 @@ catCount = result[3].votes;
 dogCount = result[2].votes;
 birdCount = result[1].votes;
 fishCount = result[0].votes;
+
+gotData = true;
+
 showAllVotes();
 }
 
@@ -175,6 +190,9 @@ catCount = result.message;
 // showVotes = true; 
 showAllVotes(); 
 
+document.getElementById("voted__p").innerHTML = "You Voted for";
+document.getElementById("voted").innerHTML = "Cats!";
+
 }
 
 // see update numbers in the client side | console.log on the Inspect on website
@@ -184,7 +202,9 @@ async function getVotesDog(result){
 dogCount = result.message;
 
 // showVotes = true; 
-showAllVotes(); 
+showAllVotes();
+document.getElementById("voted__p").innerHTML = "You Voted for";
+document.getElementById("voted").innerHTML = "Dogs!";
 
 }
 
@@ -196,6 +216,9 @@ async function getVotesBird(result){
   
   // showVotes = true; 
   showAllVotes(); 
+  document.getElementById("voted__p").innerHTML = "You Voted for";
+  document.getElementById("voted").innerHTML = "Birds!";
+
   
   }
 
@@ -206,8 +229,10 @@ async function getVotesFish(result){
   // console.log(result.message);
   fishCount = result.message;
   
-  // showVotes = true; 
   showAllVotes(); 
+  document.getElementById("voted__p").innerHTML = "You Voted for";
+  document.getElementById("voted").innerHTML = "Fishes!";
+
   
   }
 
@@ -237,6 +262,7 @@ document.getElementById("bird").addEventListener("click", function addVoteBird()
 
     // if(voteDog){  
         mySpecialRequestFish(specialUrlFish)
+
     // }
     });
 
@@ -247,12 +273,210 @@ async function showAllVotes(){
   document.getElementById("dogNum").innerHTML = dogCount;
   document.getElementById("birdNum").innerHTML = birdCount;
   document.getElementById("fishNum").innerHTML = fishCount;
+
+
 // }
 }
+
 
 loadGet();
 
 })
+
+// P5.JS \\
+
+let mousePos;
+
+let dist;
+
+let widthSize;
+let heightSize;
+
+let minSize;
+let maxSize;
+            
+// let minSize1;
+// let maxSize1;
+
+// let minSize2;
+// let maxSize2;
+
+let currentSize;
+
+// let currentSize1;
+// let currentSize2;
+
+// let currentSizeHover = 0;
+
+// let animal1;
+
+
+
+
+// let mousePos1;
+// let mousePos2;
+// let mousePos3;
+// let mousePos4;
+
+let position;
+// let position2;
+// let position1;
+// let position4;
+
+let whatAnimal="";
+
+
+let currentSizeCat;
+let currentSizeDog;
+let currentSizeBird;
+let currentSizeFish;
+
+
+let showData = false;
+
+let total;
+let catTotal;
+let dogTotal;
+let birdTotal;
+let fishTotal;
+
+let percentageValue;
+let percentageCat;
+let percentageDog;
+let percentageBird;
+let percentageFish;
+
+
+
+function setup() {
+  
+  let node = document.getElementById('show__graph');  
+  window.document.getElementsByTagName('section')[2].appendChild(node);
+  new p5(sketch, node);  
+   
+  }
+
+let sketch = function(p) {
+  p.setup = function(){
+    widthSize = windowWidth/2.5;
+    heightSize = windowHeight/1.5;
+    p.createCanvas(widthSize,heightSize);
+    p.mousePos = createVector(0, 0,); 
+    
+    p.textAlign(CENTER, CENTER);
+    p.noStroke();   
+  }
+
+  p.draw = function() {
+    if (!gotData) {
+        return;
+    }
+    p.background(235);
+    p.mousePos = createVector(p.mouseX, p.mouseY);
+
+    //PERCENTEGE
+    catTotal = catCount;
+    dogTotal= dogCount;
+    birdTotal = birdCount;
+    fishTotal = fishCount;
+
+    total = catTotal + dogTotal + birdTotal + fishTotal;
+
+    //CAT
+    p.position = createVector(widthSize * 0.20, heightSize/2);
+    p.mousePos = createVector(p.mouseX, p.mouseY);
+    p.currentSizeCat =  Math.floor((catTotal*4) / total * 100);
+    p.percentageCat =  Math.floor((catTotal) / total * 100);
+    whatAnimal = "CATS";
+
+    animalShow(p.position, p.mousePos, catCount, p.currentSizeCat, p.percentageCat, whatAnimal);
+
+    //DOG
+    p.position = createVector(widthSize * 0.40, heightSize/2);
+    p.mousePos = createVector(p.mouseX, p.mouseY);
+    p.currentSizeDog = Math.floor((dogTotal*4) / total * 100);
+    p.percentageDog =  Math.floor((dogTotal) / total * 100);
+
+    
+    whatAnimal = "DOGS";
+
+    animalShow(p.position, p.mousePos, dogCount, p.currentSizeDog, p.percentageDog, whatAnimal );
+
+      //BIRD
+      p.position = createVector(widthSize * 0.60, heightSize/2);
+      p.mousePos = createVector(p.mouseX, p.mouseY);
+      p.currentSizeBird =  Math.floor((birdTotal*4) / total * 100);
+      p.percentageBird =  Math.floor((birdTotal) / total * 100);
+
+      whatAnimal = "BIRDS";
+  
+      animalShow(p.position, p.mousePos, birdCount, p.currentSizeBird, p.percentageBird, whatAnimal);
+  
+      //FISH
+      p.position = createVector(widthSize* 0.80, heightSize/2);
+      p.mousePos = createVector(p.mouseX, p.mouseY);
+      p.currentSizeFish = Math.floor((fishTotal*4) / total * 100);
+      p.percentageFish =  Math.floor((fishTotal) / total * 100);
+
+      whatAnimal = "FISHES";
+  
+      animalShow(p.position, p.mousePos, fishCount, p.currentSizeFish, p.percentageFish,  whatAnimal );
+  
+    }
+
+
+  function animalShow(position, mousePos, animalCount, currentSize, percentageValue, whatAnimal){
+
+    minSize = currentSize;
+    maxSize = currentSize * 2;
+  
+    p.dist = p5.Vector.dist(position, mousePos);
+
+    if(p.dist < minSize/2){  
+
+        p.fill(54, 7, 100);
+        p.ellipse(position.x, position.y, (currentSize * 1.5) + 20 , (currentSize * 1.5 ) + 20);
+
+        p.fill(85, 14, 156);
+        p.ellipse(position.x, position.y, currentSize* 1.5, currentSize* 1.5);
+        showData = true;
+
+      }
+      else{
+        p.fill(54, 7, 100);
+        p.ellipse(position.x, position.y, currentSize, currentSize);
+        showData = false;
+      }
+
+    p.fill(255);
+    p.textSize(15);
+    p.strokeWeight(3);
+
+    p.text(whatAnimal, position.x, position.y);
+
+    if(showData){
+    p.textSize(25);
+    p.strokeWeight(5);
+    p.text(percentageValue.toString() + " %", position.x, position.y - (currentSize/2));
+
+    p.textSize(10);
+    p.strokeWeight(.3);
+    p.text(animalCount.toString() + " votes", position.x, position.y + 20);
+
+    
+    }
+    p.fill(20);
+    p.textSize(50);
+    p.strokeWeight(10);
+    p.text(total.toString(), widthSize/2,heightSize/6);
+
+    p.textSize(12);
+    p.strokeWeight(.3);
+    p.text("Total Votes", widthSize/2,heightSize/6 + 30);
+  }
+
+};
+
 
 
 

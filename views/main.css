@@ -114,7 +114,6 @@
         flex-direction: row;
         position: relative; 
         width: 50%;
-        /* background-color: rgb(187, 255, 0); */
         justify-content: center;
       }
 
@@ -133,14 +132,12 @@
         position: relative;
         width: 50%;
         margin: 0rem;
-        /* background-color: rgb(42, 44, 165); */
 
       }
       @media screen and (max-width: 1000px) {
         #Second__line__animal  {
         padding: 0px;
         height: auto;
-        /* flex-direction: column; */
         width: 100%;
       }
     }
@@ -151,6 +148,7 @@
         height: auto;
         position: relative;
         margin: 5%;
+        /* margin-bottom: 1rem; */
     }
 
     .animals:hover {
@@ -166,7 +164,6 @@
         height:auto; 
       }
     }
-
 
     #cat{
       font-size:2rem;
@@ -195,7 +192,6 @@
     }
   }
 
-
   #dog{
       font-size:2rem;
       width: 80%;
@@ -221,7 +217,6 @@
       box-shadow: 5px 5px 10px rgb(94, 94, 94);
     }
   }
-
 
   #bird{
     font-size:2rem;
@@ -249,7 +244,6 @@
   }
 }
 
-
 #fish{
     font-size:2rem;
     width: 80%;
@@ -276,10 +270,6 @@
   }
 }
 
-
-
-
-/*  */
     .animal__name {
       font-size: 1rem;
       font-weight: 600;
@@ -295,7 +285,6 @@
       padding: 0rem 0rem 0rem 0rem;
       height: 60vh;
       width: 100%;
-      /* background-color: rgb(223, 100, 196); */
 
     }
 
@@ -308,12 +297,10 @@
     }
 
     #show__graph {
+
       position: relative;
-      /* height:25vh ; */
       width: 40%; 
-      /* background-color: rgb(91, 26, 134); */
       height: 53vh;
-      /* margin-bottom: rem; */
     }
 
     @media screen and (max-width: 1200px) {
@@ -323,29 +310,6 @@
         width: 100%;
       }
     }
-
-
-    /* #graph {
-      display: flex;
-      flex-direction: row;
-      justify-content: right;
-      padding: 0rem 0rem 0rem 0rem;
-      height: 100%;
-      width: 100%;
-      background-color: rgb(100, 129, 223);
-
-    }
-
-    @media screen and (max-width: 1200px) {
-      #graph {
-        flex-direction: column;
-        height: auto;
-        width: 100%;
-      }
-    } */
-
-
-
 
     #show__info {
       position: relative;
@@ -429,12 +393,12 @@
         justify-content: center;
         text-align: center;
         background-color: rgb(85, 14, 156);
+        /* background-color: rgb(54, 7, 100); */
+
         border-radius: 25px;
         box-shadow: 5px 5px 3px rgb(190, 190, 190);
         height: 30vh;
         }
-
-    
 
           .info__style__1 {
             margin-top: 5rem;
@@ -442,13 +406,39 @@
             font-size:2rem;
           }
   
-          #line {
-              /* padding-top: 20rem; */
-              margin-top: 10rem;
+          #linea1 {
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+            height: 2px;
+            width: auto;
+            background-color: rgb(153, 153, 153);
           }
+
+          #linea2 {
+            margin-top: 5rem;
+            margin-bottom: 5rem;
+            height: 2px;
+            width: auto;
+
+            background-color:rgb(153, 153, 153);
+        }
+
           .references{
             margin-top: 5rem;
             font-size: 1rem;
+          }
+
+
+          #voted__p{
+            font-size: 4rem;
+            font-weight: 300;
+            margin: 0rem;
+          }
+          #voted{
+            font-size: 7rem;
+            font-weight: 600;
+            margin: 0rem;
+            
           }
 
         
