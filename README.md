@@ -4,6 +4,8 @@
 <!-- A one sentence description of the project or assignment -->
 ## This is a project is a Website were the user can vote between four options for their favorite animal. 
 
+
+
 <img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/11.png" width="60%">
 
 <!-- It is good practice to add an about or summary -->
@@ -75,6 +77,8 @@ Mobile             |  Tablet  |  Desktop
 
 ## Design Process
 
+<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/8.gif?raw=true" width="100%">
+
 In this design I had different challenges to acomplish during this process assignment. 
 
 For my proposal a intended to: 
@@ -110,23 +114,51 @@ The process of making my Style Guide helped me to visualize with anticipation, h
 <img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/19.png?raw=true" width="100%">
 
 ## Development Process
+In this assignment I started creating the folders and dependencies for my database and communication with node.js. Although it is a setup step, I sometomes get confusse and always consult with the class material to make sure what steps to follow.
+<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/1.png?raw=true" width="50%">
 <img src="" width="100%">
 <img src="" width="100%">
-<img src="" width="100%">
-
-### HTML CSS and JS
-
 
 
 ### Accesing two objects for voting
 
+In this project a basically continued working on a concept that I was trying to achieve for previous assignments: Make possible to choose between multiple options. I knew that this exploration was going to be complicated so I started from were I leave my code last time, and using Nedb. In my process of learning I need to repeat the task, to be able to understanding it a little bit better each time. 
+
+
+<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/2.gif?raw=true" width="100%">
+
+
+
+### HTML CSS and JS
+<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/3.png?raw=true" width="50%">
+<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/1.gif?raw=true" width="100%">
+
+<img src="" width="100%">
+
 
 ### Creating a nwe database in NeDB
 
+<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/3.gif?raw=true" width="100%">
+<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/9.png?raw=true" width="50%">
+<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/10.png?raw=true" width="50%">
+
+
+
+
+
 ### Adding a P5 canvas into the website
+
+<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/4.gif?raw=true" width="100%">
+<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/13.png?raw=true" width="100%">
+
+
 
 
 ### Adding new animals through Postman
+<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/8.png?raw=true" width="100%">
+
+
+
 
 <!-- How you built this project - Include images, gifs, and notes here ## Process & Documentation -->
 
@@ -146,15 +178,18 @@ adding a P5 canvas in a specific location, and make interactve motion using the 
 **Deployment on Glitch**
 **Trying Heroku**
 
+<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/16.png?raw=true" width="50%">
+
+<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/18.png?raw=true" width="50%">
 <!-- Any questions you have -->
 
 ## Next steps
-* make sure that the user can vote one time. What are the options?
+* Make sure that the user can vote one time. What are the options?
 * 
 
 <!-- References for resources and inspiration -->
 
-# Click below for watch Video
+## Click below for watch Video
 [Video_Documentation](https://youtu.be/QHd9iiGpXCw "DWD Project")
 
 ***
@@ -175,7 +210,7 @@ adding a P5 canvas in a specific location, and make interactve motion using the 
 * [Heroku Tutorial For Beginners](https://www.youtube.com/watch?v=aUW5GAFhu6s)
 
 
-
+<img src="" width="100%">
 
 
 
