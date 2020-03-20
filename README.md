@@ -112,7 +112,9 @@ adding a P5 canvas in a specific location, and make interactve motion using the 
 
 <!-- Any questions you have -->
 
-## Future Work
+## Next steps
+* make sure that the user can vote one time. What are the options?
+* 
 
 <!-- References for resources and inspiration -->
 
@@ -123,7 +125,7 @@ adding a P5 canvas in a specific location, and make interactve motion using the 
 
 ### References
 [express api tutorial - Joey Lee](https://github.com/joeyklee/simple-express-api)
-[Instance Container P5.js] https://p5js.org/examples/instance-mode-instance-container.html 
+[Instance Container P5.js](https://p5js.org/examples/instance-mode-instance-container.html)
 [HTML File Paths](https://www.w3schools.com/html/html_filepaths.asp)
 [Serving static files in Express](http://expressjs.com/en/starter/static-files.html)
 [Problem serving static files with Express](https://stackoverflow.com/questions/53308128/problem-serving-static-files-with-express)
