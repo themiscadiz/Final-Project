@@ -110,14 +110,15 @@ However, the essence of that interaction is to confirm the vote. That is why i d
 <img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/14.png?raw=true" width="50%">
 
 **Style Guide**
+
 The process of making my Style Guide helped me to visualize with anticipation, how I want to separe my sections to make it responsive. This give me clarity in the CSS development. Although that I applied also other measuramentes, I mostly used responsive width and height for my design.
 <img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/19.png?raw=true" width="100%">
 
 ## Development Process
+
 In this assignment I started creating the folders and dependencies for my database and communication with node.js. Although it is a setup step, I sometomes get confusse and always consult with the class material to make sure what steps to follow.
 <img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/1.png?raw=true" width="50%">
-<img src="" width="100%">
-<img src="" width="100%">
+
 
 
 ### Accesing two objects for voting
@@ -125,15 +126,16 @@ In this assignment I started creating the folders and dependencies for my databa
 In this project a basically continued working on a concept that I was trying to achieve for previous assignments: Make possible to choose between multiple options. I knew that this exploration was going to be complicated so I started from were I leave my code last time, and using Nedb. In my process of learning I need to repeat the task, to be able to understanding it a little bit better each time. 
 
 
-<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/2.gif?raw=true" width="100%">
+<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/2.gif?raw=true" width="100%"> 
 
+One of the most challenging things in this part of the assignment was to update each animal in the database. Basically I used If statemets to pair the selected Item with the Id and update the number of votes.
 
+After I was able to vote for two options I decided to work in a new version of the code were i started from the beggining crrating the database. Even althoug I was basically repeating some steps from previous assigments, it is always something new to figure it out how to make it works. 
 
-### HTML CSS and JS
-<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/3.png?raw=true" width="50%">
-<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/1.gif?raw=true" width="100%">
+### Adding new animals through Postman
 
-<img src="" width="100%">
+Because this step I haven't done it correctly before, it is always confusing how to add new object to the database. Thanks to the Postman tutorial it was more easy to add *key* and *values* to the object. Definetly was very satisfying see the information be update it into the database. 
+<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/8.png?raw=true" width="100%">
 
 
 ### Creating a nwe database in NeDB
@@ -143,20 +145,31 @@ In this project a basically continued working on a concept that I was trying to 
 <img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/10.png?raw=true" width="50%">
 
 
+### HTML CSS and JS
 
+I started early in the process to work in the frontend of the website. Although I had previously make a similar design with multiples buttons, this time I was also making the website responsive. 
+
+<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/3.png?raw=true" width="100%">
+
+I organized my html in section idetified mostly with Id's to make the buttons to communicate with the main.js file and give it style in CSS file. I left and available "div" in the page for simulate the space were the P5 canvas it is going to be located. The to follow better what I am doing in the css i like to colored the divs ans section to understand how I manipulating the sections. 
+
+<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/1.gif?raw=true" width="100%">
 
 
 ### Adding a P5 canvas into the website
 
+**Motion in the P5 Sketch**
+
+The first and easy approach to use a p5 canvas into your website is to embed the code from the P5 web editor.  However, I though because I am using Nedb locally I didn't have a way to call the api from the P5 web editor. I decided to work in a P5 sketch locally. 
 <img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/4.gif?raw=true" width="100%">
-<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/13.png?raw=true" width="100%">
+Originally I didn't have an intention to make and interactive visualization. but I was creating the graphics, I notices that using P5 for this, and not making interactive could be a lots opportunity to experiment. Having said that, during the process I didnt figuri it out how to feed the animation of the shapes with the data that I was recieving from the database. 
 
+I believe that the problem was around I wasn't able to update the data of the canvas without interfiring with the actual information of the animal votes. 
+Looking on the internet looks like I was trying to  when I pass a variable into a function didnt affect the outside variable. A friend told me that maybe I was trying to reference a variable, but i didnt figure it out how to make work in js. 
 
+<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/13.png?raw=true" width="50%">
 
-
-### Adding new animals through Postman
-<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/8.png?raw=true" width="100%">
-
+I decided to make circle to visualize each information of the animal. The size of each circle is relative to the percentage of votes. So if an animal recieve more of votes it circle would be bigger while other circle would be smallers. If your hover the mouse inside the circle you can see what percentege of the votes has that animal.
 
 
 
@@ -164,28 +177,57 @@ In this project a basically continued working on a concept that I was trying to 
 
 <!-- Any specific challenges or struggles documented -->
 ## Challenges & Struggles
-Because in general there is a lot of information to absorbe and apply during this process, I have to say that i encounter difficulties during each step of the development process. the hard part is not only ignore the reason why something didnt work, but also try to understant how sometimes you make it work. I think that that is the main reason that I feel that some challenges or struggles were to obscure to understand. 🙃
 
-However, I noticed that things that were a challenge 3 weeks ago, this last time it wasn't. That give me hope. 
+Because in general there is a lot of information to absorbe and apply during this process, I have to say that I encountered difficulties during each step of the development process. The hard part is not only ignore the reason why something didnt work, but also try to understant how sometimes you make it work. I think that that is the main reason that I feel that some challenges or struggles were to obscure to understand. 🙃
+
+My process is heavy in challenges. Sometimes I spend a lot of time figuring out thing that i was hoping to be fast and easy. 
+**However, I noticed that things that were a challenge 3 weeks ago, this last time it wasn't. That give me hope!**
 
 ### In this assigment the things that were more challenging were: 
 
 **Accesing file in outside folders**
+
+* I have difficulties referencing files outside the views folder. I researched about how to referencing this folder but i wasn't able to make work.
+
 **P5 Integrated in the website**
-adding a P5 canvas in a specific location, and make interactve motion using the voting counts
+
+* Figuring out how to add a canvas in a specific area of the wesite. I found a P5 reference that helpme to achieve a specific location, but is not precise.
+
+* Make a specific file for P5 js outside the main.js file. 
+
+* Make a more dynamic sketch using the variables from the database.
+
 **Creating a new database using Nedb**
+
 **Using Mongo DB**
+
 **Deployment on Glitch**
+* Not sure exacly why, but this time Glitch giveme a really hard time uploading the git repo. The errors on Glitch are not super clear, so it was hard for me understant the source of the problem.
+
 **Trying Heroku**
+* I tried to deployd my website on Herocu and also gave me errors.
 
-<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/16.png?raw=true" width="50%">
+             |    
+:-------------------------:|:-------------------------:
+<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/16.png?raw=true" width="100%"> |  <img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/18.png?raw=true" width="100%">
 
-<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/18.png?raw=true" width="50%">
 <!-- Any questions you have -->
 
-## Next steps
-* Make sure that the user can vote one time. What are the options?
-* 
+## Next Steps
+For this project I build a simple voting system. I am not sure is a get this idea because we are in presidential election year, but I consider that this project give the fundaments to explore  better how to build and use database and how to store different type of information added by the user. Definetly was a fun concept to apporach a full dynamic web!
+
+However, if I was going to deploy a voting system I have to develop and think about solutions for this next steps:
+
+* **Voters and vote’s integrity** 
+- Make sure that the user can vote only one time. 
+- Make and option to confirm their vote.
+- Make the database secure and secure privacy
+
+* **Administrator Experience** 
+- it would be interesting to develope an area were an admin can support the system of follor some trend of the voting experience.
+
+* **Analytics** 
+- Include a dash board were users can explore the information of the voting trends 
 
 <!-- References for resources and inspiration -->
 
@@ -210,7 +252,7 @@ adding a P5 canvas in a specific location, and make interactve motion using the 
 * [Heroku Tutorial For Beginners](https://www.youtube.com/watch?v=aUW5GAFhu6s)
 
 
-<img src="" width="100%">
+<!--   <img src="" width="100%">  -->
 
 
 
