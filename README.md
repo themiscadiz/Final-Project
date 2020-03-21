@@ -121,12 +121,20 @@ In this assignment I started creating the folders and dependencies for my databa
 
 
 
-### Accesing two objects for voting
+### Accesing two objects for voting and creating a database in NeDB
 
 In this project a basically continued working on a concept that I was trying to achieve for previous assignments: Make possible to choose between multiple options. I knew that this exploration was going to be complicated so I started from were I leave my code last time, and using Nedb. In my process of learning I need to repeat the task, to be able to understanding it a little bit better each time. 
 
 
 <img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/2.gif?raw=true" width="100%"> 
+
+Accesing Database from NeDB             |  .
+:-------------------------:|:-------------------------:
+<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/2.gif?raw=true" width="100%">  |  <img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/3.gif?raw=true" width="100%">
+
+Accesing Database from NeDB             |  .
+:-------------------------:|:-------------------------:
+<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/9.png?raw=true" width="100%">  |  <img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/10.png?raw=true" width="100%">
 
 One of the most challenging things in this part of the assignment was to update each animal in the database. Basically I used If statemets to pair the selected Item with the Id and update the number of votes.
 
@@ -138,22 +146,15 @@ Because this step I haven't done it correctly before, it is always confusing how
 <img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/8.png?raw=true" width="100%">
 
 
-### Creating a nwe database in NeDB
-
-<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/3.gif?raw=true" width="100%">
-<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/9.png?raw=true" width="50%">
-<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/10.png?raw=true" width="50%">
-
-
 ### HTML CSS and JS
 
 I started early in the process to work in the frontend of the website. Although I had previously make a similar design with multiples buttons, this time I was also making the website responsive. 
 
-<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/3.png?raw=true" width="100%">
+<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/3.png?raw=true" width="50%">
 
 I organized my html in section idetified mostly with Id's to make the buttons to communicate with the main.js file and give it style in CSS file. I left and available "div" in the page for simulate the space were the P5 canvas it is going to be located. The to follow better what I am doing in the css i like to colored the divs ans section to understand how I manipulating the sections. 
 
-<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/1.gif?raw=true" width="100%">
+<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/1.gif?raw=true" width="50%">
 
 
 ### Adding a P5 canvas into the website
@@ -207,9 +208,10 @@ My process is heavy in challenges. Sometimes I spend a lot of time figuring out 
 **Trying Heroku**
 * I tried to deployd my website on Herocu and also gave me errors.
 
-             |    
+Heroku screenshots             |  Heroku screenshots  
 :-------------------------:|:-------------------------:
 <img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/16.png?raw=true" width="100%"> |  <img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/18.png?raw=true" width="100%">
+
 
 <!-- Any questions you have -->
 
