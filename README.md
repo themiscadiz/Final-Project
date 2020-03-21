@@ -125,9 +125,6 @@ In this assignment I started creating the folders and dependencies for my databa
 
 In this project a basically continued working on a concept that I was trying to achieve for previous assignments: Make possible to choose between multiple options. I knew that this exploration was going to be complicated so I started from were I leave my code last time, and using Nedb. In my process of learning I need to repeat the task, to be able to understanding it a little bit better each time. 
 
-
-<img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/2.gif?raw=true" width="100%"> 
-
 Accesing Database from NeDB             |  .
 :-------------------------:|:-------------------------:
 <img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/2.gif?raw=true" width="100%">  |  <img src="https://github.com/themiscadiz/Images_for_Final_Project_Documentation/blob/master/Images/3.gif?raw=true" width="100%">
